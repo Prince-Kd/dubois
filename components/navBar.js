@@ -9,6 +9,7 @@ const navigation = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
   { name: "News", href: "/news" },
+  { name: "Museum", href: "/museum" },
   { name: "Gallery", href: "/gallery" },
   { name: "Contact Us", href: "/contact" },
 ];
@@ -55,7 +56,7 @@ export default function NavBar() {
                 </h1>
               </div>
               <div className="hidden lg:block sm:ml-6">
-                <div className="grid grid-cols-5 gap-x-4">
+                <div className="grid grid-cols-6">
                   {navigation.map((item) => (
                     <Link key={item.name} href={item.href}>
                       <a
@@ -74,6 +75,7 @@ export default function NavBar() {
                 </div>
               </div>
               <button
+                onClick={() => router.push("/booking")}
                 type="button"
                 className="h-10 hidden  hover:bg-white hover:text-orange-600 hover:border-2 hover:border-orange-600 px-3 shadow-md rounded-md bg-orange-600 text-white lg:flex flex-col justify-center items-center text-center"
               >
@@ -81,7 +83,7 @@ export default function NavBar() {
               </button>
             </div>
           </div>
-          <Disclosure.Panel className="sm:hidden">
+          <Disclosure.Panel className="sm:hidden flex flex-col bg-orange-50 shadow-md">
             <div className="px-2 pt-2 pb-3 space-y-1">
               {navigation.map((item) => (
                 <Disclosure.Button
@@ -89,17 +91,24 @@ export default function NavBar() {
                   as="a"
                   href={item.href}
                   className={classNames(
-                    item.current
-                      ? "bg-gray-900 text-white"
-                      : "text-gray-300 hover:bg-gray-700 hover:text-white",
+                    item.href === currentRoute
+                      ? "bg-orange-600 text-white"
+                      : "text-gray-600 hover:bg-gray-700 hover:text-white",
                     "block px-3 py-2 rounded-md text-base font-medium"
                   )}
-                  aria-current={item.current ? "page" : undefined}
+                  aria-current={item.href === currentRoute ? "page" : undefined}
                 >
                   {item.name}
                 </Disclosure.Button>
               ))}
             </div>
+            <button
+              onClick={() => router.push("/booking")}
+              type="button"
+              className="h-10 mx-20 mb-10 text-sm lg:hidden  hover:bg-white hover:text-orange-600 hover:border-2 hover:border-orange-600 px-3 shadow-md rounded-full bg-orange-600 text-white flex flex-col justify-center items-center text-center"
+            >
+              Book a facility
+            </button>
           </Disclosure.Panel>
         </>
       )}
