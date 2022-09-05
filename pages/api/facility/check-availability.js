@@ -5,7 +5,7 @@ export default async function handler(req, res) {
   await dbConnection();
   try {
     const { date, id } = req.body;
-    const booking = await Booking.findOne({ facilityId: id, date: date });
+    const booking = await Booking.findOne({ "facility._id": id, "date": date });
     if (!booking) {
       return res.status(200).json({
         data: true,

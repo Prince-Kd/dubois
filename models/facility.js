@@ -37,6 +37,7 @@ const facilitySchema = new Schema(
       },
     },
     slug: { type: String, required: true },
+    bookings: [{ type: Schema.Types.ObjectId, ref: "Booking" }],
   },
   { timestamps: true }
 );
