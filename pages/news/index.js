@@ -24,8 +24,8 @@ export default function News() {
         {
           news.map((item, index) => {
             return (
-              <div className="lg:h-[500px] bg-white h-80 flex flex-col shadow-md" key={index} >
-                <div className="relative lg:h-[250px] h-32">
+              <div className=" bg-white flex flex-col shadow-md" key={index} >
+                <div className="relative lg:h-[250px] h-[200px]">
                   <Image src={"/hall.jpeg"} layout="fill" />
                 </div>
                 <div className="lg:p-8 p-4 flex flex-col lg:gap-4 gap-2">

@@ -30,7 +30,7 @@ export default function Gallery() {
           className="font-thin lg:text-4xl text-center"
         >
           CHECK OUR GALLERY{" "}
-          <text className="text-orange-600">FROM RECENT EVENTS</text>
+          <text className="text-[#EC994B]">FROM RECENT EVENTS</text>
         </h1>
       </section>
       <section
@@ -38,28 +38,28 @@ export default function Gallery() {
         data-aos-delay="900"
         className="lg:px-4 px-2 lg:pb-20 pb-10 grid grid-cols-2 lg:grid-cols-4 gap-1 relative"
       >
-        <div className="h-52 w-full relative" onClick={openModal}>
+        <div className="lg:h-52 h-40 w-full relative" onClick={openModal}>
           <Image
             src={"/zion.jpeg"}
             layout={"fill"}
             className="hover:scale-125 duration-1000 hover:ease-in-out"
           />
         </div>
-        <div className="h-52 w-full relative" onClick={openModal}>
+        <div className="lg:h-52 h-40 w-full relative" onClick={openModal}>
           <Image
             src={"/zion.jpeg"}
             layout={"fill"}
             className="hover:scale-125 duration-1000 hover:ease-in-out"
           />
         </div>
-        <div className="h-52 w-full relative" onClick={openModal}>
+        <div className="lg:h-52 h-40 w-full relative" onClick={openModal}>
           <Image
             src={"/zion.jpeg"}
             layout={"fill"}
             className="hover:scale-125 duration-1000 hover:ease-in-out"
           />
         </div>
-        <div className="h-52 w-full relative" onClick={openModal}>
+        <div className="lg:h-52 h-40 w-full relative" onClick={openModal}>
           <Image
             src={"/zion.jpeg"}
             layout={"fill"}

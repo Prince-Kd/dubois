@@ -31,10 +31,10 @@ export default function Home() {
             className="font-thin lg:text-4xl text-2xl text-center"
           >
             WHAT ARE THEY{" "}
-            <text className="text-orange-600">SAYING ABOUT US</text>
+            <text className="text-[#EC994B]">SAYING ABOUT US</text>
           </h1>
         </div>
-        <TestimonialSwiper />
+        
       </section>
       <section className="lg:p-20 p-10">
         <div className="flex flex-col gap-2 mb-10">
@@ -50,14 +50,14 @@ export default function Home() {
             data-aos-delay="600"
             className="font-thin lg:text-4xl text-2xl text-center"
           >
-            CHECK <text className="text-orange-600">OUR GALLERY</text>
+            CHECK <text className="text-[#EC994B]">OUR GALLERY</text>
           </h1>
         </div>
         <HomeGallery />
         <div className="flex flex-row justify-center">
           <Link href="/gallery">
             <a
-              className="rounded-md h-12 shadow-md hover:text-orange-600 hover:bg-white hover:border-2 hover:border-orange-600 bg-orange-600 text-white px-5 flex flex-col justify-center items-center mt-10"
+              className="rounded-md h-12 shadow-md hover:text-[#EC994B] hover:bg-white hover:border-2 hover:border-[#EC994B] bg-[#EC994B] text-white px-5 flex flex-col justify-center items-center mt-10"
             >
               View more
             </a>

@@ -15,7 +15,7 @@ export default function Booking() {
   }
 
   return (
-    <div className="bg-gray-50">
+    <div className="">
       <Head>
         <title>Book a facility</title>
         <meta
@@ -24,7 +24,7 @@ export default function Booking() {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <section className="w-screen lg:p-20">
+      <section className="w-screen lg:p-20 p-10">
         <h1 className="text-4xl font-medium  text-gray-700 text-center">
           BOOK A FACILITY
         </h1>
@@ -34,98 +34,44 @@ export default function Booking() {
           className="font-thin lg:text-4xl text-center"
         >
           BOOK OUR FACILITIES{" "}
-          <text className="text-orange-600">FOR YOUR EVENTS</text>
+          <text className="text-[#EC994B]">FOR YOUR EVENTS</text>
         </h1>
       </section>
-      <section className="lg:px-20 lg:pb-20 lg:grid grid-cols-3 gap-8">
-        <div
-          data-aos="fade-up"
-          data-aos-delay="700"
-          className=" shadow-md rounded-sm bg-white"
-        >
-          <div className="relative h-60">
-            <Image src={"/hall.jpeg"} layout="fill" />
-          </div>
-          <div className="lg:p-5 flex flex-col gap-4">
-            <span className="text-orange-600 lg:text-4xl text-center">
-              GHC 2,500
-            </span>
-            <hr />
-            <h1 className="lg:text-2xl  text-gray-800 text-center">CONFERENCE ROOM 1</h1>
-            <span className="lg:text-lg text-center">
-              <strong>Type: </strong>Indoor
-            </span>
-            <span className="lg:text-lg text-center">
-              <strong>Capacity: </strong> 200 - 250 people
-            </span>
-            <hr />
-            <button
-              onClick={openModal}
-              className="bg-orange-600 text-white rounded-full hover:border-2 hover:border-orange-600 lg:px-10 lg:h-10 text-center hover:bg-white hover:text-orange-600 self-center"
-            >
-              Book now
-            </button>
-          </div>
-        </div>
-        <div
-          data-aos="fade-up"
-          data-aos-delay="800"
-          className=" shadow-md rounded-sm bg-white"
-        >
-          <div className="relative h-60">
-            <Image src={"/hall.jpeg"} layout="fill" />
-          </div>
-          <div className="lg:p-5 flex flex-col gap-4">
-            <span className="text-orange-600 lg:text-4xl text-center">
-              GHC 2,500
-            </span>
-            <hr />
-            <h1 className="lg:text-2xl  text-gray-800 text-center">CONFERENCE ROOM 1</h1>
-            <span className="lg:text-lg text-center">
-              <strong>Type: </strong>Indoor
-            </span>
-            <span className="lg:text-lg text-center">
-              <strong>Capacity: </strong> 200 - 250 people
-            </span>
-            <hr />
-            <button
-              onClick={openModal}
-              className="bg-orange-600 text-white rounded-full hover:border-2 hover:border-orange-600 lg:px-10 lg:h-10 text-center hover:bg-white hover:text-orange-600 self-center"
-            >
-              Book now
-            </button>
-          </div>
-        </div>
-        <div
-          data-aos="fade-up"
-          data-aos-delay="900"
-          className=" shadow-md rounded-sm bg-white"
-        >
-          <div className="relative h-60">
-            <Image src={"/hall.jpeg"} layout="fill" />
-          </div>
-          <div className="lg:p-5 flex flex-col gap-4">
-            <span className="text-orange-600 lg:text-4xl text-center">
-              GHC 2,500
-            </span>
-            <hr />
-            <h1 className="lg:text-2xl  text-gray-800 text-center">CONFERENCE ROOM 1</h1>
-            <span className="lg:text-lg text-center">
-              <strong>Type: </strong>Indoor
-            </span>
-            <span className="lg:text-lg text-center">
-              <strong>Capacity: </strong> 200 - 250 people
-            </span>
-            <hr />
-            <button
-              onClick={openModal}
-              className="bg-orange-600 text-white rounded-full hover:border-2 hover:border-orange-600 lg:px-10 lg:h-10 text-center hover:bg-white hover:text-orange-600 self-center"
-            >
-              Book now
-            </button>
-          </div>
-        </div>
-        <BookingModal isOpen={isOpen} closeModal={closeModal} />
+      <section className="lg:px-20 px-10 lg:pb-20 pb-10 lg:grid flex flex-col grid-cols-4 gap-8">
+        {[1, 2, 3, 4].map((item, index) => {
+          return (
+            <div data-aos="fade-up" data-aos-delay="700" className="flex flex-col gap-2">
+              <div className="relative h-52 rounded-xl">
+                <div className="absolute right-3 lg:text-sm text-xs z-50 font-bold text-white top-3 shadow-md rounded-full px-2 py-1 bg-[#EC994B]">
+                  GHC 1,500
+                </div>
+                <Image
+                  src={"/hall.jpeg"}
+                  layout="fill"
+                  className="rounded-xl"
+                />
+              </div>
+              <div className="flex flex-col">
+                <h1 className="lg:text-lg  text-gray-800 font-bold">
+                  CONFERENCE ROOM 1
+                </h1>
+                <span className="text-gray-600">
+                  <strong>Type: </strong>Indoor
+                </span>
+                <span className="text-gray-600">
+                  <strong>Capacity: </strong> 200 - 250 people
+                </span>
+                <button
+                  onClick={openModal}
+                  className="mt-2 text-[#EC994B] bg-white rounded-lg border-2 border-[#EC994B] lg:px-10 px-5 lg:h-12 h-10 text-center hover:bg-[#EC994B] hover:text-white"
+                >
+                  View Details
+                </button>
+              </div>
+            </div>
+          );
+        })}
+        <BookingModal isOpen={isOpen} closeModal={closeModal} available={null} />
       </section>
     </div>
   );

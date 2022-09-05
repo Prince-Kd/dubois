@@ -5,8 +5,9 @@ import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import { ChevronRightIcon } from "@heroicons/react/outline";
 
-export default function HomeSwiper(){
+export default function HomeSwiper() {
   return (
     <Swiper
       // install Swiper modules
@@ -26,4 +27,4 @@ export default function HomeSwiper(){
       <SwiperSlide>Slide 4</SwiperSlide>
     </Swiper>
   );
-};
+}

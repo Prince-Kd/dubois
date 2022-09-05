@@ -13,8 +13,8 @@ import {
 
 export default function Footer() {
   return (
-    <footer className="lg:px-20 px-5 py-5 lg:py-14 bg-gray-800 w-screen">
-      <div className="grid lg:grid-cols-4 grid-cols-2 mb-14 gap-y-5">
+    <footer className="lg:px-20 px-10 py-5 lg:py-14 bg-gray-800 w-screen">
+      <div className="lg:grid lg:grid-cols-4 flex flex-col  mb-14 gap-y-5">
         <div className="flex flex-row items-start gap-3 text-gray-100">
           <LocationMarkerIcon className="h-8 w-8 text-gray-100" />
           <div className="flex flex-col justify-start">
@@ -74,7 +74,7 @@ export default function Footer() {
         </div>
       </div>
       <hr />
-      <div className="mt-10 text-center w-full text-gray-100">&copy; Copyright DuBois Meemorial Center, Accra</div>
+      <div className="mt-10 text-center w-full text-gray-100">&copy; Copyright DuBois Memorial Center, Accra</div>
     </footer>
   );
 }

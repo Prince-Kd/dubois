@@ -6,6 +6,7 @@ import Image from "next/image";
 
 import "swiper/css";
 import "swiper/css/navigation";
+import { XIcon } from "@heroicons/react/outline";
 
 export default function GallerySwiper({ isOpen, closeModal, image }) {
   return (
@@ -36,7 +37,7 @@ export default function GallerySwiper({ isOpen, closeModal, image }) {
             >
               <Dialog.Panel className="h-[100vh] overflow-hidden w-screen transition-all relative">
                 <button onClick={closeModal} className="text-white font-medium text-4xl absolute top-10 right-10  z-50">
-                    x
+                    <XIcon className="text-white h-8 w-8" />
                 </button>
                 <Swiper
                   // install Swiper modules
@@ -48,25 +49,25 @@ export default function GallerySwiper({ isOpen, closeModal, image }) {
                 //   scrollbar={{ draggable: true }}
                   onSwiper={(swiper) => console.log(swiper)}
                   onSlideChange={() => console.log("slide change")}
-                  className="h-full w-full"
+                  className="lg:h-screen h-[550px] w-full"
                 >
                   <SwiperSlide  className="flex flex-col justify-center items-center ">
-                    <div className="h-1/2 w-full relative z-100" onClick={() => {console.log("")}}>
+                    <div className="h-full w-[85vw] my-32 relative z-100" onClick={() => {console.log("")}}>
                     <Image src={"/zion.jpeg"}  layout={"fill"} className="" />
                     </div>
                   </SwiperSlide>
-                  <SwiperSlide  className="flex flex-col justify-center items-center ">
-                    <div className="h-1/2 w-full relative z-100" onClick={() => {console.log("")}}>
+                  <SwiperSlide  className="flex flex-col  justify-center items-center ">
+                    <div className="h-full w-[85vw] my-32 relative z-100" onClick={() => {console.log("")}}>
                     <Image src={"/zion.jpeg"}  layout={"fill"} className="" />
                     </div>
                   </SwiperSlide>
-                  <SwiperSlide  className="flex flex-col justify-center items-center ">
-                    <div className="h-1/2 w-full relative z-100" onClick={() => {console.log("")}}>
+                  <SwiperSlide  className="flex flex-col  justify-center items-center ">
+                    <div className="h-full w-[85vw] my-32 relative z-100" onClick={() => {console.log("")}}>
                     <Image src={"/zion.jpeg"}  layout={"fill"} className="" />
                     </div>
                   </SwiperSlide>
-                  <SwiperSlide  className="flex flex-col justify-center items-center ">
-                    <div className="h-1/2 w-full relative z-100" onClick={() => {console.log("")}}>
+                  <SwiperSlide  className="flex flex-col  justify-center items-center ">
+                    <div className="h-full w-[85vw] my-32 relative z-100" onClick={() => {console.log("")}}>
                     <Image src={"/zion.jpeg"}  layout={"fill"} className="" />
                     </div>
                   </SwiperSlide>
